@@ -1,0 +1,192 @@
+.title2 {
+  margin-top: 5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tech {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 250px);
+  justify-content: center;
+  gap: 12px;
+  transition-duration: 500ms;
+
+  div {
+    transition: transform 0.25s ease-in-out;
+    background-color: #1a1a1a;
+  }
+
+  .grid {
+    padding: 1.2rem;
+
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.7s ease;
+
+    .skill-title {
+      background-color: #1a1a1a00;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: #e2e2e2c2;
+
+        &:hover {
+          color: #e2e2e2;
+        }
+      }
+    }
+
+    .body {
+      font-weight: 300;
+      font-size: 0.9rem;
+      text-align: left;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #0e0e0e00;
+      color: #c9c6c6;
+    }
+
+    .html,
+    .js,
+    .node,
+    .react,
+    .redux,
+    .mongo,
+    .strapi,
+    .css {
+      color: #e2e2e2c2;
+      font-weight: 700;
+      background-color: #0e0e0e00;
+    }
+  }
+  .grid1:hover {
+    z-index: 3;
+    box-shadow: 0 20px 100px rgba(252, 55, 6, 0.13),
+      0 20px 50px rgba(230, 78, 8, 0.11),
+      -40px -20px 90px rgba(0, 200, 250, 0.15),
+      40px 20px 90px rgba(120, 120, 255, 0.15);
+  }
+  //   .grid2:hover {
+  //           z-index: 3;
+  //   box-shadow: 0 20px 100px rgba(227, 252, 6, 0.144),
+  //     0 20px 50px rgba(208, 230, 8, 0.13),
+  //     -40px -20px 90px rgba(0, 200, 250, 0.15),
+  //     40px 20px 90px rgba(120, 120, 255, 0.15);
+  // }
+  //   .grid3:hover {
+  //           z-index: 3;
+  //   box-shadow: 0 20px 100px rgba(6, 252, 68, 0.13),
+  //     0 20px 50px rgba(78, 230, 8, 0.116),
+  //     -40px -20px 90px rgba(0, 200, 250, 0.15),
+  //     40px 20px 90px rgba(120, 120, 255, 0.15);
+  // }
+  //   .grid4:hover {
+  //           z-index: 3;
+  //   box-shadow: 0 20px 100px rgba(6, 162, 252, 0.089),
+  //     0 20px 50px rgba(8, 230, 163, 0.089),
+  //     -40px -20px 90px rgba(0, 200, 250, 0.15),
+  //     40px 20px 90px rgba(120, 120, 255, 0.15);
+  // }
+
+  //   .grid7:hover {
+  //     z-index: 3;
+  //   box-shadow: 0 20px 100px rgba(121, 6, 252, 0.13),
+  //     0 20px 50px rgba(123, 8, 230, 0.123),
+  //     -40px -20px 90px rgba(0, 200, 250, 0.15),
+  //     40px 20px 90px rgba(120, 120, 255, 0.15);
+  // }
+
+  .grid:hover {
+    cursor: pointer;
+    background-color: #1a1a1ab7;
+  }
+}
+
+.mobilescroll{
+  display: none;
+}
+
+.hover:hover {
+  .tech {
+    transition-delay: 0s;
+    transition-duration: 500ms;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  .hover:hover {
+    .tech {
+      gap: 1rem;
+    }
+  }
+  .title2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+  .tech {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .tech::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .tech {
+    overflow: scroll;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 280px);
+    grid-template-rows: repeat(2, auto);
+    min-width: 10px;
+    justify-content: start;
+    padding: 6rem 1.2rem 6rem 1.2rem;
+    gap: 1rem;
+    margin: -4.2rem 0rem -4.8rem 0rem;
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      outline-offset: -2px;
+      outline: none;
+      border-radius: 5px;
+
+      .grid1 {
+        overflow: hidden;
+      }
+
+      .body {
+        font-weight: 400;
+      }
+    }
+  }
+  .mobilescroll{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 688px) {
+ 
+  .tech {
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+@media only screen and (min-width: 1190px) {
+  .tech {
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, auto);
+  }
+
+}
