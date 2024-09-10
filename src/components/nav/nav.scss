@@ -1,10 +1,67 @@
 .container {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+.btn {
+  color: #FDE8E9;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  width: 100%; 
+  transition: all 0.5s ease-out;
+  @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+  
+  &:hover { text-decoration: none; }
+  
+}
+}
+/////////////////////////////////
+//button one
+///////////////////////////////
+.btn-1 {
+  background:transparent;
+  font-weight: 100;
+  
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0; 
+    width: 100%; 
+  }
+  
+  rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+.btn-1:hover {
+  font-weight: 900;
+  letter-spacing: 1px;
+  
+  rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
 
 .navbar {
@@ -32,7 +89,7 @@
   padding-bottom: 7px;
   mark {
     background-color: rgba(102, 51, 153, 0) !important;
-    color: #e2e2e2c2;
+    color: #FDE8E9
   }
 
   .mark2 {
@@ -48,11 +105,10 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  gap: 20px;
+  align-items: center;
 }
 
-.nav-elements ul li:not(:last-child) {
-  margin-right: 60px;
-}
 .nav-elements ul li {
   cursor: pointer;
 }
@@ -63,7 +119,9 @@
   color: aliceblue;
   text-decoration: none;
 }
-
+.nav-elements ul a:hover{
+  color: #893168;
+}
 .nav-elements ul a.active {
   color: #574c4c;
   font-weight: 500;
@@ -159,7 +217,7 @@
   .nav-elements ul li {
     margin-top: 22px;
     font-size: 1rem;
-    color: #e2e2e2c2;
+    color: #FDE8E9;
     margin-right: 30px;
     padding-bottom: 1rem;
     padding-top: 0rem;
@@ -169,6 +227,6 @@
     margin-right: 30px;
 
     font-size: 1rem;
-    color: #e2e2e2c2;
+    color: #FDE8E9
   }
 }

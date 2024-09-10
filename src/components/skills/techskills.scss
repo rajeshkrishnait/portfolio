@@ -16,9 +16,12 @@
 
   div {
     transition: transform 0.25s ease-in-out;
-    background-color: #1a1a1a;
+    background-color: transparent;
   }
-
+  img{
+    height:200px;
+    width:200px;
+  }
   .grid {
     padding: 1.2rem;
 
@@ -38,7 +41,7 @@
         color: #e2e2e2c2;
 
         &:hover {
-          color: #e2e2e2;
+          color: #FDE8E9
         }
       }
     }
@@ -50,7 +53,7 @@
       padding-top: 1rem;
       padding-bottom: 1rem;
       background-color: #0e0e0e00;
-      color: #c9c6c6;
+      color: #FDE8E9
     }
 
     .html,
@@ -61,7 +64,7 @@
     .mongo,
     .strapi,
     .css {
-      color: #e2e2e2c2;
+      color: #FDE8E9;
       font-weight: 700;
       background-color: #0e0e0e00;
     }

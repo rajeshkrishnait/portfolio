@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import "./nav.scss";
-
+import resume from '../../assets/RajeshKrishna.pdf'
 import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import BathroomRoundedIcon from "@mui/icons-material/BathroomRounded";
 
-const Nav = ({ skill, project }) => {
+const Nav = ({ skill, project, experience }) => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
 
@@ -54,7 +54,10 @@ useEffect(() => {
     handleShowNavbar();
     project.current.scrollIntoView({ behavior: "smooth" });
   };
-
+  const handleExperienctClick = () =>{
+    handleShowNavbar();
+    experience.current.scrollIntoView({ behavior: "smooth" });
+  }
   const handleReloadClick = () => {
     
     window.location.reload(); // Reload the page
@@ -69,7 +72,7 @@ useEffect(() => {
       <div className="container">
         <a>
           <h1 onClick={handleReloadClick} className="logo">
-            m<mark className="mark2">.</mark>
+            Rajesh<mark className="mark2"></mark>
           </h1>
         </a>
         <div
@@ -80,20 +83,14 @@ useEffect(() => {
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
-            <li>
-              <a
-                onClick={handleShowNavbar}
-                className="reverse"
-                href="https://drive.google.com/file/d/1P17hK1usPetP6ADo29vHA8TMgBCENQqw/view?usp=drive_link"
-                target="_blank"
+          <li>
+              <nav
+                onClick={handleExperienctClick}
                 style={{ display: "flex", alignItems: "center" }}
               >
-                <ArticleRoundedIcon
-                  fontSize="medium"
-                  style={{ color: "#a2ffc6" }}
-                />
-                <span style={{ marginLeft: "10px" }}>resume</span>
-              </a>
+                {" "}
+                <a>Experience</a>
+              </nav>
             </li>
             <li>
               <nav
@@ -101,11 +98,7 @@ useEffect(() => {
                 style={{ display: "flex", alignItems: "center" }}
               >
                 {" "}
-                <AnalyticsRoundedIcon
-                  fontSize="medium"
-                  style={{ color: "#e6accb" }}
-                />{" "}
-                <a style={{ marginLeft: "10px" }}>skills</a>
+                <a>Skills</a>
               </nav>
             </li>
             <li>
@@ -114,12 +107,30 @@ useEffect(() => {
                 style={{ display: "flex", alignItems: "center" }}
               >
                 {" "}
-                <BathroomRoundedIcon
-                  fontSize="medium"
-                  style={{ color: "#b9e5ff" }}
-                />{" "}
-                <a style={{ marginLeft: "10px" }}>projects</a>
+                
+                <a >Projects</a>
               </nav>
+            </li>
+            <li>
+            <a  onClick={handleShowNavbar}
+                href={resume}
+                target="_blank"
+                style={{ display: "flex", alignItems: "center", margin:'0px', minWidth: '100px'}} class="btn btn-1 ">
+          <svg>
+            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+          </svg>
+          Resume
+        </a>
+              {/* <a
+                onClick={handleShowNavbar}
+                className="reverse"
+                href={resume}
+                target="_blank"
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                
+                <span style={{ marginLeft: "10px" }}>Resume</span>
+              </a> */}
             </li>
           </ul>
         </div>

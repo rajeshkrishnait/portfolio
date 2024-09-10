@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import "./aboutme.scss";
-
+import ProfilePic from '../../assets/Rajesh_krishna_profile.jpg'
 const Letter = ({ letter, duration, delay, className }) => (
   <motion.mark
     initial={{ opacity: 0, scale: 0.5 }}
@@ -21,8 +21,6 @@ const AboutMe = ({ contact }) => {
   return (
     <div className="about">
       <div className="left">
-        <div className="circle2"></div>
-        <div className="circle3"></div>
         <h1 data-scroll data-scroll-speed="0.2" className="welcome">
           <span className="welcome-text">
             <Letter
@@ -119,20 +117,12 @@ const AboutMe = ({ contact }) => {
           </mark>
           <Letter letter="." duration={2.2} delay={2.2} className="mark2" />
         </h1>
-        <motion.button
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 2.2,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          data-scroll
-          data-scroll-speed="0.1"
-          onClick={() => contact.current.scrollIntoView({ behavior: "smooth" })}
-        >
-          &lt;build me a website/&gt;
-        </motion.button>
+        <a onClick={() => contact.current.scrollIntoView({ behavior: "smooth" })} class="btn btn-1">
+          <svg>
+            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+          </svg>
+          Get In Touch
+        </a>
       </div>
       <div data-scroll data-scroll-speed="0.4" className="right">
         <div className="container">
@@ -140,21 +130,19 @@ const AboutMe = ({ contact }) => {
             data-scroll
             data-scroll-speed="0.1"
             className="laptop"
-            src="../a.webp"
+            src={ProfilePic}
             alt="a laptop"
             fetchpriority="high"
           />
         </div>
         <div className="desc">
-          Hey there! This is Mithesh! As a <span>full-stack developer</span>{" "}
-          with a passion for <span> UI design,</span> I'm thrilled to have you
-          here. I have experience building <span>responsive websites, </span>
-          creating <span>intuitive user interfaces,</span> and{" "}
-          <span>optimizing website performance.</span>
+          <span>Rajesh Krishna.</span> 
           <br />
+          A passionate software developer with over <span>2.5 years of professional experience</span>, 
+          specializing in building responsive and scalable web applications using <span>React,
+          Node.js, and MongoDB</span>. Proven track record in optimizing performance, enhancing user engagement, 
+          and delivering high-quality code through Agile methodologies.
           <br />
-          Thank you for stopping by, and I hope you enjoy exploring my
-          portfolio!
         </div>
       </div>
     </div>

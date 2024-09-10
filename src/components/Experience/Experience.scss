@@ -1,0 +1,89 @@
+
+.experience{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+.role{
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.experience li{
+    list-style-type: none;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    opacity: 0.8;
+    &:before{
+        content: "▹";
+        position: absolute;
+        left: 0px;
+        color: #893168;
+        
+    }
+}
+.company{
+    color: inherit;
+    transition: all 0.5s ease-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:after{
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon fill="white" points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/></svg>');
+        content:'';
+        transition: all 300ms ease-out;
+        width: 24px;
+        display: inline-block;
+        margin-left: 8px;
+        height: 24px;
+        background-repeat: no-repeat;
+    }
+    &:before{
+        content: "";
+        display: block;
+        width: 0px;
+        height: 1.5px;
+        position: absolute;
+        bottom: 0;
+        background-color: #893168;
+        transition: all 300ms ease-out;
+    }
+}
+.company:hover{
+    color: #893168;
+    &:after{
+        margin-left: 15px;
+    }
+    &:before    {
+        width: 80%;
+    }
+}
+.experience_section{
+    display: flex;
+    gap:30px;
+    flex-direction: row;
+    &>ul{
+        padding: 0;
+    }
+}
+.techstack{
+    margin-top: 16px;
+    &>img{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+}
