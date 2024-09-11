@@ -102,3 +102,12 @@
     }
     
 }
+
+@media screen and (max-width: 768px) {
+ .left_sidenav{
+    left: 0;
+ }   
+ .right_sideNav{
+    right:0;
+ }
+}

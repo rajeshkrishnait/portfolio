@@ -173,7 +173,7 @@ html {
   }
 }
 
-@media only screen and (max-width: 1263px) {
+@media only screen and (max-width: 768px) {
   .about {
     flex-direction: column;
     align-items: center;
@@ -199,12 +199,7 @@ html {
     }
 
     .right {
-      .container {
-        .laptop {
-          width: 85%;
-          margin-top: -4rem;
-        }
-      }
+
       .desc {
         margin: 2rem;
         margin-top: 0rem;
