@@ -2,12 +2,11 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import "./projects.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import PublicIcon from "@mui/icons-material/Public";
 import LaptopRoundedIcon from "@mui/icons-material/LaptopRounded";
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
-import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+
+
+import project1 from '../../assets/ReactflowPlayground.png'
 import { forwardRef } from "react";
 
 const Projects = forwardRef((props, ref) => {
@@ -91,7 +90,7 @@ const Projects = forwardRef((props, ref) => {
           <div className="image" ref={(el) => (imageRefs.current[0] = el)}>
             <img
               loading="lazy"
-              src="../ReactflowPlayground.png"
+              src={project1}
               alt="project img"
               fetchpriority="low"
             />
