@@ -4,11 +4,19 @@ import "./projects.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PublicIcon from "@mui/icons-material/Public";
 import LaptopRoundedIcon from "@mui/icons-material/LaptopRounded";
+import ImageSlider from './imageSlider/ImageSlider.jsx';
 
-
+import Search from '../../assets/search.png'
+import Menu from '../../assets/Menu.png'
+import order from '../../assets/order.png'
+import track from '../../assets/track.png'
+import payment from '../../assets/payment.png'
+import homepage from '../../assets/homepage.png'
+import review from '../../assets/review.png'
 import project1 from '../../assets/ReactflowPlayground.png'
 import { forwardRef } from "react";
 
+const images=[homepage, Search, Menu, order, payment, track, review]
 const Projects = forwardRef((props, ref) => {
   const projectRefs = useRef([]);
   const imageRefs = useRef([]);
@@ -96,56 +104,42 @@ const Projects = forwardRef((props, ref) => {
             />
           </div>
         </div>
-        {/* <div className="projectstop">
+        <div className="projectstop">
           <div className="project" ref={(el) => (projectRefs.current[1] = el)}>
             <div style={{ display: "flex", gap: "2rem" }}>
               <div className="techstack">
-                <div className="zero">01 React.js</div>
-                <div className="one">02 Express.js</div>
-                <div className="two">03 MongoDB</div>
-                <div className="two">04 JWT</div>
+                <div className="zero">01 Javascript</div>
+                <div className="one">02 css</div>
+                <div className="two">03 Ajax</div>
+                <div className="two">04 mysql</div>
               </div>
-              <DevicesRoundedIcon
+              {/* <DevicesRoundedIcon
                 style={{ color: "#e2e2e2c2", fontSize: "1.5rem" }}
-              />
+              /> */}
             </div>
             <h1 data-scroll data-scroll-speed="0.02" className="title_p">
-              Credit Express.
+              BeServed.
             </h1>
             <div className="description">
-              Credit Express is a web application for managing loans. It allows
-              registered users to avail loans and administrators to approve
-              loans. Users can fulfill loans on a weekly term.
+            This project is designed as an Online Catering Integration Platform, aimed at simplifying and streamlining the catering service process. It allows users to explore catering services, view menu options, and place orders seamlessly through an intuitive interface.
             </div>
             <br />
             <div className="links">
               <a
                 className="source"
-                href="https://github.com/Mithesh-B/CreditExpress"
+                href="https://github.com/rajeshkrishnait/Online-Catering-Integration-Platform/tree/master/bcpro2"
                 target="_blank"
               >
                 <GitHubIcon />
                 Source
               </a>
-              <a
-                className="demo"
-                href="https://creditexpress.pages.dev/"
-                target="_blank"
-              >
-                <PublicIcon />
-                Live link
-              </a>
+             
             </div>
           </div>
           <div className="image" ref={(el) => (imageRefs.current[1] = el)}>
-            <img
-              loading="lazy"
-              src="../project6.webp"
-              alt="project img"
-              fetchpriority="low"
-            />
+            <ImageSlider images={images}/>
           </div>
-        </div> */}
+        </div>
         {/* {showMoreProjects && (
           <>
             <div className="projectstop">
