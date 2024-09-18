@@ -61,7 +61,7 @@
     justify-content: space-between;
     transform: translateX(-50%) perspective(800px) rotateY(-20deg);
     transform-origin: right;
-    background-color: rgba(29, 29, 29, 0.795);
+    background-color:#1A2A4E;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 300px;
@@ -90,26 +90,7 @@
       margin: 0px;
       line-height: 1em;
       font-size: 50px;
-      background: #3d91d2; /* Fallback color */
-      background: -webkit-linear-gradient(
-        124deg,
-        #fa91d0 0%,
-        #3d91d2 100%
-      ); /* Safari and Chrome */
-      background: -moz-linear-gradient(
-        124deg,
-        #fa91d0 0%,
-        #3d91d2 100%
-      ); /* Firefox */
-      background: linear-gradient(
-        124deg,
-        #fa91d0 0%,
-        #3d91d2 100%
-      ); /* Hexadecimal */
-      background-clip: text;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
+     
     }
 
     .description {
