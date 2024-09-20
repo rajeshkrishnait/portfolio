@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import "./aboutme.scss";
-import ProfilePic from '../../assets/Rajesh_krishna_profile.jpg'
+import ProfilePic from '../../assets/Rajesh_krishna_profile.webp'
 const Letter = ({ letter, duration, delay, className }) => (
   <motion.mark
     initial={{ opacity: 0, scale: 0.5 }}

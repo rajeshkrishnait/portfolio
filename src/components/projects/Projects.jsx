@@ -11,7 +11,7 @@ import Menu from '../../assets/Menu.png'
 import order from '../../assets/order.png'
 import track from '../../assets/track.png'
 import payment from '../../assets/payment.png'
-import homepage from '../../assets/homepage.png'
+import homepage from '../../assets/homepage.webp'
 import review from '../../assets/review.png'
 import project1 from '../../assets/ReactflowPlayground.png'
 import { forwardRef } from "react";
